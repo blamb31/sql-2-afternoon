@@ -663,6 +663,21 @@ FROM customer;
 
 Always do a select before a delete to make sure you get back exactly what you want and only what you want to delete! Since we cannot delete anything from the pre-defined tables ( foreign key restraints ), use the following SQL code to create a dummy table:
 
+#### My Answers
+
+1)
+DELETE FROM practice_delete
+WHERE type = 'bronze'
+
+2)
+DELETE FROM practice_delete
+WHERE type = 'silver'
+
+3)
+DELETE FROM practice_delete
+WHERE value = 150
+
+
 <details>
 
 <summary> <code> practice_delete TABLE </code> </summary>
