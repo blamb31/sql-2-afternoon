@@ -390,6 +390,44 @@ UPDATE athletes SET sport = 'Picklball' WHERE sport = 'pockleball';
 5. Find all tracks that are the genre `Metal` and have no composer. Set the composer to `"The darkness around us"`.
 6. Refresh your page to remove all database changes.
 
+#### My Answers
+
+1)
+UPDATE customer
+SET fax = null
+WHERE fax IS NOT null;
+
+SELECT * FROM customer
+
+2)
+UPDATE customer
+SET company = 'Self'
+WHERE company IS null;
+
+SELECT * FROM customer
+
+3)
+UPDATE customer
+SET last_name = 'Thompson'
+WHERE first_name = 'Julia' AND last_name = 'Barnett';
+
+SELECT * FROM customer
+
+4)
+UPDATE customer
+SET support_rep_id = 4
+WHERE email = 'luisrojas@yahoo.cl';
+
+SELECT * FROM customer
+
+5)
+UPDATE track
+SET composer = 'The darkness around us'
+WHERE genre_id = ( SELECT genre_id FROM genre WHERE name = 'Metal' ) AND composer IS NULL;
+
+SELECT * FROM track
+
+
 ### Solution
 
 <details>
