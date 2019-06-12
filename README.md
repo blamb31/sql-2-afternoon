@@ -519,6 +519,27 @@ GROUP BY [column];
 2. Find a count of how many tracks are the `"Pop"` genre and how many tracks are the `"Rock"` genre.
 3. Find a list of all artists and how many albums they have.
 
+#### My Answers
+
+1)
+SELECT g.name, COUNT(*)
+FROM track t
+JOIN genre g ON t.genre_id = g.genre_id
+GROUP BY g.name
+
+2)
+SELECT g.name, COUNT(*)
+FROM track t
+JOIN genre g ON t.genre_id = g.genre_id
+WHERE g.name = 'Pop' OR g.name = 'Rock'
+GROUP BY g.name
+
+3)
+SELECT ar.name, COUNT(*)
+FROM artist ar
+JOIN album a ON ar.artist_id = a.artist_id
+GROUP BY ar.name 
+
 ### Solution
 
 <details>
