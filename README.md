@@ -37,6 +37,32 @@ SELECT a.name, b.name FROM some_table a JOIN another_table b ON a.some_id = b.so
 7. Get all track `name`s and the playlist `name` that they're on ( 2 joins ).
 8. Get all track `name`s and album `title`s that are the genre `Alternative & Punk` ( 2 joins ).
 
+#### My Answers
+
+1) 
+SELECT *
+FROM invoice i
+JOIN invoice_line il ON il.invoice_id = i.invoice_id
+WHERE il.unit_price > 0.99
+
+2)
+SELECT i.invoice_date, c.first_name, c.last_name, i.total
+FROM invoice i
+JOIN customer c ON i.customer_id = c.customer_id
+
+3)
+SELECT c.first_name, c.last_name, e.first_name, e.last_name
+FROM customer c
+JOIN employee e ON c.support_rep_id = e.employee_id
+
+4) 
+SELECT al.title, ar.name
+FROM album al
+JOIN artist ar ON al.artist_id = ar.artist_id
+
+5)
+
+
 ### Solution
 
 <details>
