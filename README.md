@@ -607,6 +607,17 @@ FROM [table];
 2. From the `invoice` table find a unique list of all `billing_postal_code`s.
 3. From the `customer` table find a unique list of all `company`s.
 
+##### My Answers
+
+1)
+SELECT DISTINCT composer FROM track
+
+2) 
+SELECT DISTINCT billing_postal_code FROM invoice
+
+3)
+SELECT DISTINCT company FROM customer
+
 <details>
 
 <summary> <code> SQL Solutions </code> </summary>
