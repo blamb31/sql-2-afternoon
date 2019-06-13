@@ -789,6 +789,29 @@ Let's simulate an e-commerce site. We're going to need users, products, and orde
   * Get all orders for a user.
   * Get how many orders each user has.
 
+  #### My Answers
+
+  CREATE TABLE users(
+	user_id SERIAL PRIMARY KEY,
+  name VARCHAR(60),
+  user_email VARCHAR(80), 
+  order_id INTEGER REFERENCE orders(order_id)
+)
+
+CREATE TABLE items(
+	item_id SERIAL PRIMARY KEY,
+  name VARCHAR(60),
+  price DECIMAL 
+)
+
+CREATE TABLE orders(
+	order_id SERIAL PRIMARY KEY,
+  name VARCHAR(60),
+  total DECIMAL
+)
+
+Got working, but forgot to copy each call into here. I can do it again if you guys need me to. Let me know :) 
+
 ### Black Diamond
 
 * Get the total amount on all orders for each user.
